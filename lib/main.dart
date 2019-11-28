@@ -1,22 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:twostep/HomePage.dart';
-import 'package:twostep/SplashPage.dart';
+import 'package:flutter/services.dart';
+import 'package:twostep/app.dart';
+import 'package:twostep/utils/colors.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return new MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: SplashPage(),
-    );
-
-  }
-
+void main() {
+SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+  statusBarColor: primaryDark
+));
+runApp(App());
 }
+
